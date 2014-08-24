@@ -35,12 +35,16 @@ public class Leven
 
             return cost[s0_len-1];
 
-        } catch ()
+        } catch (IndexOutOfBoundsException e) {
+        	System.out.println(e.getMessage());
+        } catch (StringIndexOutOfBoundsException e) {
+        	System.out.println(e.getMessage());
+        }
 
     }
 
     public static void main(String[] args)
     {
-        System.out.println(Levenshtein("aba", "acb"));
+        System.out.println(Levenshtein("aba", "acb") + "\n");
     }
 }
