@@ -74,6 +74,11 @@ static void displayHelp()
 
 }
 
+static int processData(int a)
+{
+
+}
+
 static u16_t getLevenDistance(const char* s0, const char* s1)
 {
     u16_t s0_len = (u16_t) strlen(s0) + 1;

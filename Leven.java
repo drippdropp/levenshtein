@@ -34,17 +34,22 @@ public class Leven
             }
 
             return cost[s0_len-1];
-
-        } catch (IndexOutOfBoundsException e) {
-        	System.out.println(e.getMessage());
         } catch (StringIndexOutOfBoundsException e) {
         	System.out.println(e.getMessage());
+            return -1;
         }
-
     }
 
     public static void main(String[] args)
     {
-        System.out.println(Levenshtein("aba", "acb") + "\n");
+        String[] compareString = { "he", "she", "his", "hers" };
+        for (int i = 0; i < 4; i++) {
+            for (int j = i; j < 4; j++) {
+                System.out.println(compareString[i]);
+                System.out.println(compareString[j]);
+                System.out.println(Levenshtein(compareString[i],
+                                               compareString[j]));
+            }
+        }
     }
 }
